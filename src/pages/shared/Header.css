@@ -2,3 +2,8 @@ h2{
     font-family: 'Edu TAS Beginner', cursive;
 font-family: 'Fasthand', cursive;
 }
+
+.title-text{
+    color: rgb(207, 82, 50);
+    font-weight: 600;
+}
