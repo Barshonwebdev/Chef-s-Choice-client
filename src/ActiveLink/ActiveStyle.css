@@ -1,3 +1,9 @@
 .active{
     color: rgb(207, 82, 50);
+    text-decoration: none;
+}
+
+.not{
+    text-decoration: none;
+    color: black;
 }
