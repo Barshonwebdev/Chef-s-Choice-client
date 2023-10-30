@@ -3,10 +3,10 @@ import './Header.css'
 import { Container } from 'react-bootstrap';
 const Header = () => {
     return (
-        <Container className='mt-5'>
+        <div className='mt-5 text-md-start text-center'>
             <h2 className='fw-bolder'>Chef`s Choice</h2>
             <small className='title-text text-uppercase'>Ultimate cookbook of chefs</small>
-        </Container>
+        </div>
     );
 };
 
