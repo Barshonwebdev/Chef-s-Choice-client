@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 import { NavLink } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Nav, Navbar } from 'react-bootstrap';
 const Header = () => {
     return (
       <div className="d-flex flex-column flex-md-row mt-5 text-md-start text-center align-items-center">
@@ -15,7 +15,7 @@ const Header = () => {
           <Navbar.Toggle className="mx-auto" aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mt-2">
-              <NavLink to="/" className="me-md-5 navs text-decoration-none">
+              <NavLink to="/" className= "me-md-5 navs text-decoration-none">
                 Home
               </NavLink>
               <NavLink
