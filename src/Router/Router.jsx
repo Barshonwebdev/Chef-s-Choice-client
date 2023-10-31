@@ -4,6 +4,7 @@ import Home from "../pages/Home/Home";
 import Blogs from "../pages/Blogs/Blogs";
 import Categories from "../pages/Categories/Categories";
 import About from "../pages/About/About";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
         path: "/about",
         element: <About></About>
       },
+      {
+        path:"*",
+        element:<NotFound></NotFound>
+      }
     ],
   },
 ]);
