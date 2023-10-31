@@ -1,0 +1,14 @@
+
+
+@media (max-width:600px){
+    .carImage{
+        height: 25vh;
+         
+    }
+}
+@media (min-width:900px){
+    .carImage{
+        
+         height: 70vh;
+    }
+}
