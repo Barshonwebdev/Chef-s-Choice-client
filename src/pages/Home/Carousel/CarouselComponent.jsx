@@ -9,7 +9,7 @@ const CarouselComponent = () => {
     setIndex(selectedIndex);
   };
   return (
-    <Carousel className='bg-dark' activeIndex={index} onSelect={handleSelect}>
+    <Carousel className='car-bg' activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
           <img className="w-50 rounded-lg rounded" src="../../../../rice.jpg" />
