@@ -7,7 +7,7 @@ const About = () => {
           <div className="d-flex justify-content-center">
             <img
               className="rounded rounded-xl img-fluid "
-              src="../../../about.jpg"
+              src="../../../about-compressed.jpg"
               alt=""
             />
           </div>
