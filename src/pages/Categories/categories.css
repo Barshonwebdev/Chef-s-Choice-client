@@ -9,3 +9,7 @@
 .scale:hover{
     transform: scale(1.4);
 }
+
+.food-category-font{
+    font-family: 'Satisfy', cursive;
+}
