@@ -16,3 +16,11 @@
 .car-bg{
     background-color: black;
 }
+
+.zoom{
+    transition: all 0.3s;
+}
+
+.zoom:hover{
+    transform: scale(1.2);
+}

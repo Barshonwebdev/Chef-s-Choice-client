@@ -19,14 +19,14 @@ const Categories = () => {
                 xs={6}
               >
                 <h3 className="icon me-2">Rice</h3>
-                <BiBowlRice className="icon fs-1"></BiBowlRice>
+                <BiBowlRice className="icon fs-1 scale"></BiBowlRice>
               </Col>
               <Col
                 className=" d-flex justify-content-start align-items-center "
                 xs={6}
               >
                 <h3 className="icon me-2">Meat</h3>
-                <TbMeat className="icon fs-1"></TbMeat>
+                <TbMeat className="icon fs-1 scale"></TbMeat>
               </Col>
             </Row>
             <Row className="">
@@ -35,14 +35,14 @@ const Categories = () => {
                 xs={6}
               >
                 <h3 className="icon me-2">Fish</h3>
-                <PiFish className="icon fs-1"></PiFish>
+                <PiFish className="icon fs-1 scale"></PiFish>
               </Col>
               <Col
                 className=" d-flex justify-content-start align-items-center "
                 xs={6}
               >
                 <h3 className="icon me-2">Salad</h3>
-                <LuSalad className="icon fs-1"></LuSalad>
+                <LuSalad className="icon fs-1 scale"></LuSalad>
               </Col>
             </Row>
             <Row className="">
@@ -51,14 +51,14 @@ const Categories = () => {
                 xs={6}
               >
                 <h3 className="icon me-2">Dessert</h3>
-                <LuCakeSlice className="icon fs-1"></LuCakeSlice>
+                <LuCakeSlice className="icon fs-1 scale"></LuCakeSlice>
               </Col>
               <Col
                 className=" d-flex justify-content-start align-items-center "
                 xs={6}
               >
                 <h3 className="icon ">Drinks</h3>
-                <BiDrink className="icon fs-1"></BiDrink>
+                <BiDrink className="icon fs-1 scale"></BiDrink>
               </Col>
             </Row>
           </Container>

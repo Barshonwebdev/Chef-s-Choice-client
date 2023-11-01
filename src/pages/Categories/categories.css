@@ -1,3 +1,11 @@
 .icon{
     color: rgb(207, 82, 50);
 }
+
+.scale{
+    transition: all 0.3s;
+}
+
+.scale:hover{
+    transform: scale(1.4);
+}
