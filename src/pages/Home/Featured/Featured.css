@@ -1,0 +1,15 @@
+.headline{
+    font-family: 'Satisfy', cursive;
+}
+
+.zoom-featured{
+    transition: all 0.3s;
+}
+
+.zoom-featured:hover{
+    transform: scale(1.05);
+}
+
+.type{
+    color: rgb(207, 82, 50);
+}
