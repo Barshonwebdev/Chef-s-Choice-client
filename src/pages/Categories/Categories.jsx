@@ -57,7 +57,7 @@ const Categories = () => {
                 className=" d-flex justify-content-start align-items-center "
                 xs={6}
               >
-                <h3 className="icon me-2">Drinks</h3>
+                <h3 className="icon ">Drinks</h3>
                 <BiDrink className="icon fs-1"></BiDrink>
               </Col>
             </Row>
