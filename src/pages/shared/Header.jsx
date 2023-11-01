@@ -29,9 +29,7 @@ const Header = () => {
                 <nav className="me-md-5 navs">
                   <ActiveLink to="/categories">CATEGORIES</ActiveLink>
                 </nav>
-                <nav className="me-md-5 navs">
-                  <ActiveLink to="/blogs">BLOGS</ActiveLink>
-                </nav>
+                
               </Nav>
             </Navbar.Collapse>
           </Navbar>
