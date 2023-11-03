@@ -19,7 +19,7 @@ const EachChef = ({chef}) => {
                 </p>
                 <p className="text-color">Total recipes: {number_of_recipes}</p>
                 <p className="text-color d-flex align-items-center">
-                  <AiOutlineLike className="fs-2 text-color"></AiOutlineLike>{" "}
+                  <AiOutlineLike className="fs-2 text-color scale"></AiOutlineLike>{" "}
                   <span className="fs-5">{likes}</span>
                 </p>
               </Card.Text>
