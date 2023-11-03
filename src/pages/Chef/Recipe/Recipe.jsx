@@ -21,9 +21,9 @@ const Recipe = ({recipe}) => {
                 ))}
                 <small className="d-block text-center fw-bolder">Method</small>
                 <small>{cooking_method}</small>
-                <div className="d-flex align-items-center justify-content-between mt-3">
+                <div className="d-flex align-items-center justify-content-between mt-1">
                   <div>
-                    <p className="d-flex align-items-center text-color scale">
+                    <p className="mt-3 d-flex align-items-center text-color scale">
                       {rating} <FaStar className='ms-1 fs-6 text-color'></FaStar>
                     </p>
                   </div>
