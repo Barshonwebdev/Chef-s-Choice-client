@@ -17,7 +17,7 @@ const Chefs = () => {
           <div className="mt-5">
             <h4 className="headline mb-5">Our Renowned Chefs</h4>
             <div>
-              <Row xs={1} md={3} className="g-4">
+              <Row xs={1} md={2} className="g-4">
                 {
                   chefs.map(chef=><EachChef chef={chef} key={chef.id}></EachChef>)
                 }
