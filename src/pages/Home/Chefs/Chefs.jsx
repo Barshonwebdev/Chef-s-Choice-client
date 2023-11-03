@@ -19,7 +19,7 @@ const Chefs = () => {
             <div>
               <Row xs={1} md={3} className="g-4">
                 {
-                  chefs.map(chef=><EachChef key={chef.id}></EachChef>)
+                  chefs.map(chef=><EachChef chef={chef} key={chef.id}></EachChef>)
                 }
               </Row>
             </div>
