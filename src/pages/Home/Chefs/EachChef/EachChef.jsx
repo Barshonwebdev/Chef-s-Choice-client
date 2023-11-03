@@ -24,7 +24,7 @@ const EachChef = ({chef}) => {
                 </p>
               </Card.Text>
               <NavLink to={`/chefs/${id}`}> 
-                <Button variant="secondary">View Recipes</Button>{" "}
+                <Button variant="dark">View Recipes</Button>{" "}
               </NavLink>
             </Card.Body>
           </Card>
