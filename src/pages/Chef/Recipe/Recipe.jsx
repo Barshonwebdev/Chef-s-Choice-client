@@ -2,8 +2,19 @@ import React from 'react';
 import './Recipe.css'
 import { Button, Card, CardFooter, Col } from 'react-bootstrap';
 import { FaStar } from "react-icons/fa";
+import { PiCookingPotFill } from "react-icons/pi";
+import toast, { Toaster } from "react-hot-toast";
+
+
 const Recipe = ({recipe}) => {
     const {recipe_name,ingredients,cooking_method,rating}= recipe;
+    const notify = () => toast(` ${recipe_name} is a favourite! `, {
+  style: {
+    color: 'rgb(207, 82, 50)',
+    fontWeight:'bolder',
+    
+  },
+});
     return (
       <div>
         <Col>
@@ -28,7 +39,8 @@ const Recipe = ({recipe}) => {
                     </p>
                   </div>
                   <div>
-                    <Button className='favorite fw-bolder' >Favourite!</Button>
+                    <Button onClick={notify} className='favorite fw-bolder' >Favourite <PiCookingPotFill className='fs-4'></PiCookingPotFill> </Button>
+                    <Toaster></Toaster>
                   </div>
                 </div>
               </Card.Text>
