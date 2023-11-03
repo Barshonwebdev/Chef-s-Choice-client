@@ -11,7 +11,7 @@ const About = () => {
               alt=""
             />
           </div>
-          <p className='fs-3 mt-5 w-md-50 mx-4 title fw-bold text-secondary'>
+          <p className='fs-3 w-75 mx-auto mt-5 px-md-5 title fw-bold text-secondary text-center'>
             Our site represents perfectly what it means to be a cookbook for the
             aspiring chefs practicing Japanese Cuisines. We provide authentic
             recipes from renowned chefs and make sure that the learning curve does
