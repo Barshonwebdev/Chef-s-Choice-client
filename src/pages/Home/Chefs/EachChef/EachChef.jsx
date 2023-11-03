@@ -5,7 +5,7 @@ import { AiOutlineLike } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const EachChef = ({chef}) => {
-  const {chef_name,chef_picture,years_of_experience,number_of_recipes,likes}= chef;
+  const {id,chef_name,chef_picture,years_of_experience,number_of_recipes,likes}= chef;
     return (
       <div>
         <Col>
@@ -23,7 +23,7 @@ const EachChef = ({chef}) => {
                   <span className="fs-5">{likes}</span>
                 </p>
               </Card.Text>
-              <NavLink to='/categories'> 
+              <NavLink to={`/chefs/${id}`}> 
                 <Button variant="secondary">View Recipes</Button>{" "}
               </NavLink>
             </Card.Body>
