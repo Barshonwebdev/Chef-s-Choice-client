@@ -12,13 +12,13 @@ const CarouselComponent = () => {
     <Carousel className="car-bg" activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
-          <img className="w-50 zoom rounded-lg rounded" src="../../../../rice.jpg" />
+          <img className="w-50  rounded-lg rounded" src="../../../../rice.jpg" />
         </div>
       </Carousel.Item>
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
           <img
-            className="w-50 zoom rounded-lg rounded"
+            className="w-50  rounded-lg rounded"
             src="../../../../katsu.jpg"
           />
         </div>
@@ -26,20 +26,20 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
           <img
-            className="w-50 zoom rounded-lg rounded"
+            className="w-50  rounded-lg rounded"
             src="../../../../sushi-all.jpg"
           />
         </div>
       </Carousel.Item>
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
-          <img className="w-50 zoom rounded-lg rounded" src="../../../../noodle.jpg" />
+          <img className="w-50  rounded-lg rounded" src="../../../../noodle.jpg" />
         </div>
       </Carousel.Item>
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
           <img
-            className="w-50 zoom rounded-lg rounded"
+            className="w-50  rounded-lg rounded"
             src="../../../../momo-all.jpg"
           />
         </div>
@@ -47,7 +47,7 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
           <img
-            className="w-50 zoom rounded-lg rounded"
+            className="w-50  rounded-lg rounded"
             src="../../../../gyoza.jpg"
           />
         </div>
@@ -55,7 +55,7 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <div className="d-flex justify-content-center carImage">
           <img
-            className="w-50 zoom rounded-lg rounded"
+            className="w-50  rounded-lg rounded"
             src="../../../../sushi.jpg"
           />
         </div>
