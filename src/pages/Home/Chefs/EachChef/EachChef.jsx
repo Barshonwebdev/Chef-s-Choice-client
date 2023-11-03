@@ -1,20 +1,23 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Button, Card, Col } from 'react-bootstrap';
+import './EachChef.css'
+import { AiOutlineLike } from "react-icons/ai";
 
 const EachChef = ({chef}) => {
-  const {chef_name}= chef;
+  const {chef_name,chef_picture,years_of_experience,number_of_recipes,likes}= chef;
     return (
       <div>
         <Col>
           <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Img variant="top" src={chef_picture} />
             <Card.Body>
-              <Card.Title>{chef_name}</Card.Title>
+              <Card.Title className='chef-name'>{chef_name}</Card.Title>
               <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                <p className='text-color'>Experience: {years_of_experience} years</p>
+                <p className='text-color'>Total recipes: {number_of_recipes}</p>
+                <p className='text-color'><AiOutlineLike className='fs-2 text-color'></AiOutlineLike> {likes}</p>
               </Card.Text>
+              <Button variant='secondary'>View Recipes</Button>
             </Card.Body>
           </Card>
         </Col>
