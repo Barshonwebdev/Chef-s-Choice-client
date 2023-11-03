@@ -15,7 +15,7 @@ const EachChef = ({chef}) => {
               <Card.Text>
                 <p className='text-color'>Experience: {years_of_experience} years</p>
                 <p className='text-color'>Total recipes: {number_of_recipes}</p>
-                <p className='text-color'><AiOutlineLike className='fs-2 text-color'></AiOutlineLike> {likes}</p>
+                <p className='text-color d-flex align-items-center'><AiOutlineLike className='fs-2 text-color'></AiOutlineLike> <span className='fs-5'>{likes}</span></p>
               </Card.Text>
               <Button variant='secondary'>View Recipes</Button>
             </Card.Body>
