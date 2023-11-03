@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Chef.css'
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useLocation } from 'react-router-dom';
 import { Col, Container, Image, Row } from 'react-bootstrap';
 import { AiOutlineLike } from 'react-icons/ai';
 const Chef = () => {
     const chefInfo=useLoaderData();
     const {chef_name,chef_picture,years_of_experience,number_of_recipes,likes,short_description,recipes}= chefInfo;
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, [pathname]);
+
+    
     return (
       <div>
         <Container fluid className="bg-black mt-5 mb-3 text-light">
