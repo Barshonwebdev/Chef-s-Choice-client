@@ -7,3 +7,11 @@
 .text-color{
     color: rgb(207, 82, 50);
 }
+
+.scale-chef{
+    transition: all 0.3s;
+}
+
+.scale-chef:hover{
+    transform: scale(1.05);
+}

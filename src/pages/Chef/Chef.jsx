@@ -20,7 +20,7 @@ const Chef = () => {
       <div>
         <Container fluid className="bg-black mt-5 mb-3 text-light">
           <Row>
-            <Col className="my-4 d-flex flex-column justify-content-center align-items-center order-2 order-md-1">
+            <Col className="my-4 d-flex flex-column justify-content-center align-items-center order-2 order-md-1 ">
               <p className="chef-name">{chef_name}</p>
               <p className=" w-75 text-center"> {short_description}</p>
               <p className="px-5 text-center"> {number_of_recipes} recipes</p>
