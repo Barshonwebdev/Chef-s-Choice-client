@@ -5,6 +5,7 @@ import Categories from "../pages/Categories/Categories";
 import About from "../pages/About/About";
 import NotFound from "../pages/NotFound/NotFound";
 import Chef from "../pages/Chef/Chef";
+import Login from "../pages/Login/Login";
 
 const router = createBrowserRouter([
   {
@@ -13,24 +14,29 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>
+        element: <Home></Home>,
       },
       {
         path: "/categories",
-        element: <Categories></Categories>
+        element: <Categories></Categories>,
       },
       {
         path: "/about",
-        element: <About></About>
+        element: <About></About>,
       },
       {
-        path:'/chefs/:id',
+        path: "/chefs/:id",
         element: <Chef></Chef>,
-        loader: ({params})=> fetch (`http://localhost:5000/chefs/${params.id}`)
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/chefs/${params.id}`),
       },
       {
-        path:"*",
-        element:<NotFound></NotFound>
+        path: "*",
+        element: <NotFound></NotFound>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
       }
     ],
   },
