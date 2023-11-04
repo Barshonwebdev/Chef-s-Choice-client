@@ -1,8 +1,8 @@
 import React from 'react';
-import './Login.css'
+import './Register.css'
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-const Login = () => {
+const Register = () => {
     return (
       <div className="d-flex justify-content-center align-items-center mt-5 mb-5">
         <Card className="p-5 bg-dark text-light">
@@ -10,15 +10,24 @@ const Login = () => {
             <h3 className="headline text-color text-center mb-3 scale">
               Chef`s Choice
             </h3>
-            <h3 className="headline text-center mb-3">Login</h3>
+            <h3 className="headline text-center mb-3">Register</h3>
+            <div className="mb-3">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                className="form-control"
+                aria-describedby="emailHelp"
+                placeholder="enter your name "
+              />
+            </div>
             <div className="mb-3">
               <label className="form-label">Email address</label>
               <input
                 type="email"
                 className="form-control"
-                id="exampleInputEmail1"
                 aria-describedby="emailHelp"
                 placeholder="enter your email "
+                required
               />
             </div>
             <div className="mb-3">
@@ -26,20 +35,32 @@ const Login = () => {
               <input
                 type="password"
                 className="form-control"
-                id="exampleInputPassword1"
-                placeholder="enter your password "
+                placeholder="enter a unique password "
               />
             </div>
-            <div className='d-flex justify-content-center'>
+            <div className="mb-3">
+              <label className="form-label">Photo url</label>
+              <input
+                type="url"
+                className="form-control"
+                placeholder="paste your photo url "
+              />
+            </div>
+
+            <div className="d-flex justify-content-center">
               <button type="submit" className="btn btn-secondary ">
-                Login
+                Register
               </button>
             </div>
-            <p className='text-center mt-3'>New here? <Link className='text-decoration-none' to='/register'>Register!</Link></p>
+            <p className="text-center mt-3">
+              Already an user? <Link className="text-decoration-none" to="/login">
+                 Login
+              </Link>
+            </p>
           </form>
         </Card>
       </div>
     );
 };
 
-export default Login;
+export default Register;
