@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
-import { NavLink } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Link, NavLink } from 'react-router-dom';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 const Header = () => {
     return (
@@ -29,10 +29,16 @@ const Header = () => {
                 <nav className="me-md-5 navs">
                   <ActiveLink to="/categories">CATEGORIES</ActiveLink>
                 </nav>
-                
               </Nav>
             </Navbar.Collapse>
           </Navbar>
+          <div className=" ms-md-5 navs">
+            <Button variant="outline-dark">
+              <Link className="text-decoration-none text-color" to="/login">
+                Login
+              </Link>
+            </Button>
+          </div>
         </div>
       </Container>
     );
