@@ -6,14 +6,14 @@ import ActiveLink from '../../ActiveLink/ActiveLink';
 const Header = () => {
     return (
       <Container>
-        <div className="d-flex flex-column flex-md-row mt-5 text-md-start text-center align-items-center">
-          <div className="me-md-5">
+        <div className="d-flex justify-content-evenly flex-column flex-md-row mt-5 text-md-start text-center align-items-center">
+          <div className="">
             <h2 className="fw-bolder title">Chef`s Choice</h2>
             <small className="title-text text-uppercase">
               Ultimate Japanese cookbook of chefs
             </small>
           </div>
-          <Navbar expand="lg ms-md-5 ">
+          <Navbar expand="lg  ">
             <Navbar.Toggle
               className="mx-auto"
               aria-controls="basic-navbar-nav"
