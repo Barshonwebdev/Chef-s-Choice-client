@@ -35,7 +35,7 @@ const Login = () => {
                 Login
               </button>
             </div>
-            <p className='text-center mt-3'>New here? <Link className='text-decoration-none' to='/register'>Register!</Link></p>
+            <p className='text-center mt-3'>New here? <Link className='text-color text-decoration-none' to='/register'>Register!</Link></p>
           </form>
         </Card>
       </div>

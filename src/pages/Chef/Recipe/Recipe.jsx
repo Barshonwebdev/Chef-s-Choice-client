@@ -20,12 +20,12 @@ const Recipe = ({recipe}) => {
         <Col>
           <Card>
             <Card.Body>
-              <Card.Title className="headline fs-3 fw-bolder mb-4 text-color text-center scale">
+              <Card.Title className="headline fs-3 fw-bolder mb-2 text-color text-center scale">
                 {recipe_name}
               </Card.Title>
               <Card.Text>
                 <small>
-                  <p className="my-2 text-center fw-bolder">Ingredients</p>
+                  <p className="my-0 text-center fw-bolder">Ingredients</p>
                 </small>
                 {ingredients.map((ingredient) => (
                   <small className="my-2 d-block">-{ingredient}</small>

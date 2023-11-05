@@ -36,6 +36,7 @@ const Register = () => {
                 type="password"
                 className="form-control"
                 placeholder="enter a unique password "
+                required
               />
             </div>
             <div className="mb-3">
@@ -53,8 +54,8 @@ const Register = () => {
               </button>
             </div>
             <p className="text-center mt-3">
-              Already an user? <Link className="text-decoration-none" to="/login">
-                 Login
+              Already an user? <Link className="text-color text-decoration-none" to="/login">
+                 Login!
               </Link>
             </p>
           </form>
