@@ -4,16 +4,24 @@ import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
-import { FaFacebookF } from "react-icons/fa";
+import { BsGithub } from "react-icons/bs";
+
 
 
 const Login = () => {
-  const {googleSignIn}=useContext(AuthContext);
+  const {googleSignIn,GitSignIn}=useContext(AuthContext);
   const signInwithGoogle=()=>{
     googleSignIn()
     .then(result=>{
       const loggedInUser=result.user;
       console.log(loggedInUser);
+    })
+  }
+  const GitLogin=()=>{
+    GitSignIn()
+    .then(resultgit=>{
+      const loggedInUsergit=resultgit.user;
+      console.log(loggedInUsergit);
     })
   }
     return (
@@ -57,7 +65,7 @@ const Login = () => {
             <p className="text-center">Or...</p>
             <Button
               variant="light"
-              className="zoom me-2"
+              className="zoom me-4"
               onClick={signInwithGoogle}
             >
               <FcGoogle className='fs-4 me-1'></FcGoogle>Sign In
@@ -65,9 +73,9 @@ const Login = () => {
             <Button
               variant="light"
               className="zoom"
-              onClick={signInwithGoogle}
+              onClick={GitLogin}
             >
-              <FaFacebookF className='fs-5 me-1 text-primary'></FaFacebookF>Log In
+              <BsGithub className='fs-5 me-1'></BsGithub>Log In
             </Button>
           </form>
         </Card>
