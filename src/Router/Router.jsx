@@ -34,7 +34,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/chefs/${params.id}`),
+          fetch(
+            `https://chef-s-choice-server-h0y73dbm1-barshons-projects.vercel.app/chefs/${params.id}`
+          ),
       },
       {
         path: "*",
