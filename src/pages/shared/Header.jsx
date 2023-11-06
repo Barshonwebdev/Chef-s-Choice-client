@@ -53,7 +53,7 @@ const Header = () => {
                 </div>
               </div>
             ) : (
-              <div className='mb-1 ms-md-1'>
+              <div className="mb-1 ms-md-1 d-inline">
                 <Button variant="outline-dark">
                   <Link className="text-decoration-none text-color" to="/login">
                     Login
@@ -61,11 +61,19 @@ const Header = () => {
                 </Button>
               </div>
             )}
-            <div className="d-flex justify-content-center">
-              <Button onClick={logout} variant="secondary" className=" ">
-                Logout
-              </Button>
-            </div>
+            {user ? (
+              <div className="d-flex justify-content-center ">
+                <Button onClick={logout} variant="secondary" className=" ">
+                  Logout
+                </Button>
+              </div>
+            ) : (
+              <div className="d-inline ms-2 ">
+                <Button onClick={logout} variant="secondary" className=" ">
+                  Logout
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       </Container>
