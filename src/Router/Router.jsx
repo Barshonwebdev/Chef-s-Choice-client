@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://chef-s-choice-server-30q7zxzzh-barshons-projects.vercel.app/chefs/${params.id}`
+            `https://chefs-choice-server-repo-production.up.railway.app/${params.id}`
           ),
       },
       {
