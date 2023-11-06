@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import './Login.css'
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -9,7 +9,24 @@ import { BsGithub } from "react-icons/bs";
 
 
 const Login = () => {
-  const {googleSignIn,GitSignIn}=useContext(AuthContext);
+  const {googleSignIn,GitSignIn,signInEmail}=useContext(AuthContext);
+  const [error, setError] = useState([]);
+  const handleEmailLogin=(event)=>{
+    event.preventDefault();
+    const form=event.target;
+    const email=form.email.value;
+    const pass=form.pass.value;
+    signInEmail(email,pass)
+    .then(result=>{
+      const loggedInUser=result.user;
+      console.log(loggedInUser);
+    })
+    .catch(error=>{
+      console.log(error);
+      setError(error.message);
+    })
+    event.target.reset();
+  }
   const signInwithGoogle=()=>{
     googleSignIn()
     .then(result=>{
@@ -27,7 +44,7 @@ const Login = () => {
     return (
       <div className="d-flex justify-content-center align-items-center mt-5 mb-5">
         <Card className="p-5 bg-dark text-light">
-          <form>
+          <form onSubmit={handleEmailLogin}>
             <h3 className="headline text-color text-center mb-3 scale">
               Chef`s Choice
             </h3>
@@ -35,6 +52,7 @@ const Login = () => {
             <div className="mb-3">
               <label className="form-label">Email address</label>
               <input
+              name='email'
                 type="email"
                 className="form-control"
                 id="exampleInputEmail1"
@@ -45,6 +63,7 @@ const Login = () => {
             <div className="mb-3">
               <label className="form-label">Password</label>
               <input
+              name='pass'
                 type="password"
                 className="form-control"
                 id="exampleInputPassword1"
@@ -77,6 +96,7 @@ const Login = () => {
             >
               <BsGithub className='fs-5 me-1'></BsGithub>Log In
             </Button>
+            <p><small className='text-center text-color'>{error}</small></p>
           </form>
         </Card>
       </div>

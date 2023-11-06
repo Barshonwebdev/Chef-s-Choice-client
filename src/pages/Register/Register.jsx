@@ -1,12 +1,33 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import './Register.css'
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../providers/AuthProvider';
 const Register = () => {
+  const {createUser}= useContext(AuthContext);
+  const [error,setError]=useState([]);
+  const handleRegister=(event)=>{
+    event.preventDefault();
+    const form=event.target;
+    const email=form.email.value;
+    const pass=form.pass.value;
+    setError('');
+    if(pass.length<=6){
+      setError('Password must be 6 characters')
+    }
+
+    createUser(email,pass)
+    .then(result=>{
+      const loggedInUser=result.user;
+      console.log(loggedInUser)
+    })
+    
+    event.target.reset();
+  }
     return (
       <div className="d-flex justify-content-center align-items-center mt-5 mb-5">
         <Card className="p-5 bg-dark text-light">
-          <form>
+          <form onSubmit={handleRegister}>
             <h3 className="headline text-color text-center mb-3 scale">
               Chef`s Choice
             </h3>
@@ -15,6 +36,7 @@ const Register = () => {
               <label className="form-label">Name</label>
               <input
                 type="text"
+                name='Name'
                 className="form-control"
                 aria-describedby="emailHelp"
                 placeholder="enter your name "
@@ -24,6 +46,7 @@ const Register = () => {
               <label className="form-label">Email address</label>
               <input
                 type="email"
+                name='email'
                 className="form-control"
                 aria-describedby="emailHelp"
                 placeholder="enter your email "
@@ -34,6 +57,7 @@ const Register = () => {
               <label className="form-label">Password</label>
               <input
                 type="password"
+                name='pass'
                 className="form-control"
                 placeholder="enter a unique password "
                 required
@@ -43,6 +67,7 @@ const Register = () => {
               <label className="form-label">Photo url</label>
               <input
                 type="url"
+                name='photoUrl'
                 className="form-control"
                 placeholder="paste your photo url "
               />
@@ -58,10 +83,11 @@ const Register = () => {
                  Login!
               </Link>
             </p>
+            <small className='text-center text-color'>{error}</small>
           </form>
         </Card>
       </div>
-    );
+    ); 
 };
 
 export default Register;
