@@ -35,20 +35,37 @@ const Header = () => {
             </Navbar.Collapse>
           </Navbar>
           <div className=" ms-md-5 navs">
-            {user ? 
-              <small className="d-block d-md-inline mt-2 mb-2 bg-dark rounded text-color p-1 me-1">
-                User: {user.email}
-              </small>
-            :
-            <Button variant="outline-dark">
-              <Link className="text-decoration-none text-color" to="/login">
-                Login
-              </Link>
-            </Button>
-            }
-            <Button onClick={logout} variant="secondary" className="ms-2 ">
-              Logout
-            </Button>
+            {user ? (
+              <div className="d-block  mt-2 mb-2">
+                <div>
+                  <small>
+                    Welcome,
+                    <span className="text-color">{user.displayName}</span>
+                  </small>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <img
+                    className="rounded zoom "
+                    width={50}
+                    height={50}
+                    src={user.photoURL}
+                  />
+                </div>
+              </div>
+            ) : (
+              <div className='mb-1 ms-md-1'>
+                <Button variant="outline-dark">
+                  <Link className="text-decoration-none text-color" to="/login">
+                    Login
+                  </Link>
+                </Button>
+              </div>
+            )}
+            <div className="d-flex justify-content-center">
+              <Button onClick={logout} variant="secondary" className=" ">
+                Logout
+              </Button>
+            </div>
           </div>
         </div>
       </Container>

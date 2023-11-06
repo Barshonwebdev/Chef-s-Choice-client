@@ -3,8 +3,9 @@ import './Register.css'
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+
 const Register = () => {
-  const {createUser}= useContext(AuthContext);
+  const {createUser,update}= useContext(AuthContext);
   const [error,setError]=useState([]);
   const handleRegister=(event)=>{
     event.preventDefault();
@@ -22,7 +23,10 @@ const Register = () => {
     .then(result=>{
       const loggedInUser=result.user;
       console.log(loggedInUser)
+      update(loggedInUser,name,photoURL)
     })
+
+    
 
     event.target.reset();
   }
@@ -34,6 +38,16 @@ const Register = () => {
               Chef`s Choice
             </h3>
             <h3 className="headline text-center mb-3">Register</h3>
+            <div className="mb-3">
+              <label className="form-label">Name</label>
+              <input
+                type="text"
+                name='name'
+                className="form-control"
+                aria-describedby="emailHelp"
+                placeholder="enter your name "
+              />
+            </div>
             <div className="mb-3">
               <label className="form-label">Email address</label>
               <input
@@ -55,7 +69,15 @@ const Register = () => {
                 required
               />
             </div>
-            
+            <div className="mb-3">
+              <label className="form-label">Photo url</label>
+              <input
+                type="url"
+                name='photoUrl'
+                className="form-control"
+                placeholder="paste your photo url "
+              />
+            </div>
 
             <div className="d-flex justify-content-center">
               <button type="submit" className="btn btn-secondary ">
