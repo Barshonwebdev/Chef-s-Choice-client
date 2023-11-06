@@ -1,12 +1,14 @@
 import React, { createContext, useEffect, useState } from 'react';
 import  {  createUserWithEmailAndPassword, getAuth,GithubAuthProvider,GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth";
 import app from '../firebase/firebase.config';
+import { useNavigate } from 'react-router-dom';
 
 
 const auth=getAuth(app);
 const provider= new GoogleAuthProvider();
 const gitprovider= new GithubAuthProvider();
 export  const AuthContext= createContext(null);
+
 
 
 const AuthProvider = ({children}) => {
@@ -36,8 +38,6 @@ const signInEmail=(email,pass)=>{
 const logout=()=>{
     return signOut(auth)
     .then(()=>{console.log('logged out');
-    
-
 })
 }
 

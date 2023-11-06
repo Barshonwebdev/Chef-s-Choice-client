@@ -1,7 +1,7 @@
 import { useContext, useState } from 'react';
 import './Login.css'
 import { Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
@@ -9,6 +9,10 @@ import { BsGithub } from "react-icons/bs";
 
 
 const Login = () => {
+  const navigate=useNavigate();
+  let location=useLocation();
+
+  const from= location.state?.from?.pathname || '/';
   const {googleSignIn,GitSignIn,signInEmail}=useContext(AuthContext);
   const [error, setError] = useState([]);
   const handleEmailLogin=(event)=>{
@@ -20,6 +24,7 @@ const Login = () => {
     .then(result=>{
       const loggedInUser=result.user;
       console.log(loggedInUser);
+      navigate(from, {replace:true});
     })
     .catch(error=>{
       console.log(error);
@@ -32,6 +37,7 @@ const Login = () => {
     .then(result=>{
       const loggedInUser=result.user;
       console.log(loggedInUser);
+      navigate(from, { replace: true });
     })
   }
   const GitLogin=()=>{
@@ -39,6 +45,7 @@ const Login = () => {
     .then(resultgit=>{
       const loggedInUsergit=resultgit.user;
       console.log(loggedInUsergit);
+      navigate(from, { replace: true });
     })
   }
     return (

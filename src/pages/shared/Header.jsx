@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import './Header.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 import { AuthContext } from '../../providers/AuthProvider';
 const Header = () => {
   const {logout,user}=useContext(AuthContext);
+  
     return (
       <Container>
         <div className="d-flex justify-content-evenly flex-column flex-md-row mt-5 text-md-start text-center align-items-center">
