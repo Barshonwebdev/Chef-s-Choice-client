@@ -1,6 +1,6 @@
 Chef's Choice
 
-Chef's Choice is all about the profiles and recipes of renowned chef's all around Japan. Each one of them masters an edge of the culinary world of Japan and brings out the best version of Japanese cuisine.
+Chef's Choice is all about the profiles and recipes of renowned chefs all around Japan. Each one of them masters an edge of the culinary world of Japan and brings out the best version of Japanese cuisine.
 
 • separate Chef's profile and recipes section
 
