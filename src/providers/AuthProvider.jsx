@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import  {  createUserWithEmailAndPassword, getAuth,GithubAuthProvider,GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import  {  createUserWithEmailAndPassword, getAuth,GithubAuthProvider,GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut} from "firebase/auth";
 import app from '../firebase/firebase.config';
 
 
@@ -23,6 +23,8 @@ const GitSignIn=()=>{
     return signInWithPopup(auth,gitprovider);
 }
 
+
+
 const createUser=(email,pass)=>{
     setLoading(true);
     return createUserWithEmailAndPassword(auth,email,pass);
@@ -33,7 +35,10 @@ const signInEmail=(email,pass)=>{
 }
 const logout=()=>{
     return signOut(auth)
-    .then(console.log('logged out'))
+    .then(()=>{console.log('logged out');
+    
+
+})
 }
 
 useEffect(()=>{

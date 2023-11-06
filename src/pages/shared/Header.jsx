@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import './Header.css'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import ActiveLink from '../../ActiveLink/ActiveLink';
 import { AuthContext } from '../../providers/AuthProvider';
 const Header = () => {
-  const {logout}=useContext(AuthContext);
+  const {logout,user}=useContext(AuthContext);
     return (
       <Container>
         <div className="d-flex justify-content-evenly flex-column flex-md-row mt-5 text-md-start text-center align-items-center">
@@ -35,12 +35,18 @@ const Header = () => {
             </Navbar.Collapse>
           </Navbar>
           <div className=" ms-md-5 navs">
+            {user && (
+              <small className="d-block d-md-inline mt-2 mb-2 bg-dark rounded text-color p-1 me-1">
+                User: {user.email}
+              </small>
+            )}
             <Button variant="outline-dark">
               <Link className="text-decoration-none text-color" to="/login">
                 Login
               </Link>
             </Button>
-            <Button onClick={logout} variant="secondary" className='ms-2 '>
+
+            <Button onClick={logout} variant="secondary" className="ms-2 ">
               Logout
             </Button>
           </div>

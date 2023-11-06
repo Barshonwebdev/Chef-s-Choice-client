@@ -11,8 +11,10 @@ const Register = () => {
     const form=event.target;
     const email=form.email.value;
     const pass=form.pass.value;
+    const name=form.name.value;
+    const photoURL = form.photoUrl.value;
     setError('');
-    if(pass.length<=6){
+    if(pass.length<6){
       setError('Password must be 6 characters')
     }
 
@@ -21,7 +23,7 @@ const Register = () => {
       const loggedInUser=result.user;
       console.log(loggedInUser)
     })
-    
+
     event.target.reset();
   }
     return (
@@ -32,16 +34,6 @@ const Register = () => {
               Chef`s Choice
             </h3>
             <h3 className="headline text-center mb-3">Register</h3>
-            <div className="mb-3">
-              <label className="form-label">Name</label>
-              <input
-                type="text"
-                name='Name'
-                className="form-control"
-                aria-describedby="emailHelp"
-                placeholder="enter your name "
-              />
-            </div>
             <div className="mb-3">
               <label className="form-label">Email address</label>
               <input
@@ -63,15 +55,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="mb-3">
-              <label className="form-label">Photo url</label>
-              <input
-                type="url"
-                name='photoUrl'
-                className="form-control"
-                placeholder="paste your photo url "
-              />
-            </div>
+            
 
             <div className="d-flex justify-content-center">
               <button type="submit" className="btn btn-secondary ">
