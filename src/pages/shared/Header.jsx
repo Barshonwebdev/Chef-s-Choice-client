@@ -35,17 +35,17 @@ const Header = () => {
             </Navbar.Collapse>
           </Navbar>
           <div className=" ms-md-5 navs">
-            {user && (
+            {user ? 
               <small className="d-block d-md-inline mt-2 mb-2 bg-dark rounded text-color p-1 me-1">
                 User: {user.email}
               </small>
-            )}
+            :
             <Button variant="outline-dark">
               <Link className="text-decoration-none text-color" to="/login">
                 Login
               </Link>
             </Button>
-
+            }
             <Button onClick={logout} variant="secondary" className="ms-2 ">
               Logout
             </Button>
