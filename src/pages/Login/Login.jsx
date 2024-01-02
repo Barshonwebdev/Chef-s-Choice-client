@@ -20,7 +20,7 @@ const Login = () => {
     const form=event.target;
     const email=form.email.value;
     const pass=form.pass.value;
-    signInEmail(email,pass)
+    signInEmail(email,pass) 
     .then(result=>{
       const loggedInUser=result.user;
       console.log(loggedInUser);

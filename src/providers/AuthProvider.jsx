@@ -1,7 +1,6 @@
-import React, { createContext, useEffect, useState } from 'react';
+import  { createContext, useEffect, useState } from 'react';
 import  {  createUserWithEmailAndPassword, getAuth,GithubAuthProvider,GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile} from "firebase/auth";
 import app from '../firebase/firebase.config';
-import { useNavigate } from 'react-router-dom';
 
 
 const auth=getAuth(app);
@@ -13,7 +12,7 @@ export  const AuthContext= createContext(null);
 
 const AuthProvider = ({children}) => {
 const  [user,setUser]=useState(null);
-
+ 
 const [loading,setLoading]=useState(true);
 
 const googleSignIn=()=>{
@@ -48,7 +47,7 @@ const update=(user,name,url)=>{
     })
 }
 
-useEffect(()=>{
+useEffect(()=>{ 
     const unsubscribe = onAuthStateChanged(auth,currentUser=>{
         setUser(currentUser);
         setLoading(false);
