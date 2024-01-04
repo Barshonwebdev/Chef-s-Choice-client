@@ -7,9 +7,7 @@ import { useEffect } from "react";
 const Chefs = () => {
   const [chefs, setChefs] = useState([]);
   useEffect(() => {
-    fetch(
-      "https://chef-s-choice-server-gsypep9lk-barshons-projects.vercel.app/chefs"
-    )
+    fetch("https://chef-s-choice-server-swart.vercel.app/chefs")
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);
